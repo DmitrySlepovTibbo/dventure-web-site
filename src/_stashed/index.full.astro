@@ -1,0 +1,256 @@
+---
+import '../styles/global.css';
+
+const tibboProducts = [
+  {
+    name: 'Programmable IoT Modules',
+    desc: 'Embedded modules for IoT and industrial automation, programmable in Tibbo BASIC or C.',
+  },
+  {
+    name: 'Serial Controllers',
+    desc: 'Multi-channel, multi-protocol serial devices with optional Wi-Fi, PoE, and displays.',
+  },
+  {
+    name: 'Tibbo Project System (TPS)',
+    desc: 'Configurable industrial automation platform built from modular Tibbit blocks.',
+  },
+  {
+    name: 'Serial-over-IP Solutions',
+    desc: 'Device servers and modules that bridge serial connections to Ethernet, with virtual serial port drivers.',
+  },
+  {
+    name: 'Modbus Gateways',
+    desc: 'Protocol bridges that route Modbus requests between TCP, ASCII, and RTU variants.',
+  },
+  {
+    name: 'IO Ninja Hardware Taps',
+    desc: 'Compact monitoring taps for real-time analysis of serial, I²C/SPI, and Ethernet connections.',
+  },
+];
+
+const ioninjaFeatures = [
+  {
+    name: 'Multi-Interface Support',
+    desc: 'Serial, Ethernet, TCP/UDP, USB, SSH, SSL, WebSockets, and many more protocols.',
+  },
+  {
+    name: 'Real-Time Protocol Analysis',
+    desc: 'A powerful logging engine that captures and analyzes network and automation traffic (Modbus, BACnet, custom).',
+  },
+  {
+    name: 'Packet Construction & Templates',
+    desc: 'Hex editors, packet builders, and a C-like template engine for binary protocol authoring.',
+  },
+  {
+    name: 'Session Linking & Redirection',
+    desc: 'Bridge data between interfaces — Serial ⇆ TCP, USB ⇆ SSH, and more — for flexible testing.',
+  },
+  {
+    name: 'Scriptable Automation',
+    desc: 'Built-in scripting to generate packets, react to events, and build custom analyzers.',
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Dventure LLC — authorized U.S. reseller of Tibbo IoT hardware and IO Ninja protocol analysis software."
+    />
+    <title>Dventure LLC — Tibbo & IO Ninja Reseller</title>
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-800 antialiased">
+    <header class="sticky top-0 z-10 border-b border-slate-200 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a href="#top" class="text-lg font-semibold tracking-tight text-slate-900">
+          Dventure <span class="text-indigo-600">LLC</span>
+        </a>
+        <nav class="hidden gap-8 text-sm font-medium text-slate-600 sm:flex">
+          <a href="#software" class="hover:text-indigo-600">Software</a>
+          <a href="#hardware" class="hover:text-indigo-600">Hardware</a>
+          <a href="#contact" class="hover:text-indigo-600">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-24">
+        <p class="text-sm font-semibold uppercase tracking-wider text-indigo-600">
+          U.S. reseller · IoT hardware & protocol software
+        </p>
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+          Industrial connectivity,<br />delivered from the U.S.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+          Dventure LLC supplies North American customers with the full Tibbo
+          hardware catalog and IO Ninja protocol-analysis software — backed by
+          local sales, fast shipping, and direct factory support.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a
+            href="#hardware"
+            class="rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500"
+          >
+            Browse hardware
+          </a>
+          <a
+            href="#software"
+            class="rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-indigo-400 hover:text-indigo-600"
+          >
+            See the software
+          </a>
+        </div>
+      </section>
+
+      <!-- Software -->
+      <section id="software" class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+          <div class="max-w-3xl">
+            <p class="text-sm font-semibold uppercase tracking-wider text-indigo-600">
+              Software
+            </p>
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              IO Ninja — versatile terminal, sniffer, and protocol analyzer
+            </h2>
+            <p class="mt-5 text-lg leading-relaxed text-slate-600">
+              A professional cross-platform tool for Windows, Linux, and macOS.
+              Used by network security experts, system administrators, IoT
+              developers, and firmware engineers to debug, capture, and analyze
+              communications across virtually any interface.
+            </p>
+          </div>
+
+          <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {
+              ioninjaFeatures.map((f) => (
+                <li class="rounded-lg border border-slate-200 bg-slate-50 p-6">
+                  <h3 class="text-base font-semibold text-slate-900">{f.name}</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">{f.desc}</p>
+                </li>
+              ))
+            }
+          </ul>
+
+          <div class="mt-10">
+            <a
+              href="https://ioninja.com"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-500"
+            >
+              Visit ioninja.com →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hardware -->
+      <section id="hardware" class="border-t border-slate-200">
+        <div class="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+          <div class="max-w-3xl">
+            <p class="text-sm font-semibold uppercase tracking-wider text-indigo-600">
+              Hardware
+            </p>
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Tibbo — IoT and industrial automation hardware
+            </h2>
+            <p class="mt-5 text-lg leading-relaxed text-slate-600">
+              Tibbo's specialism is IoT. Their catalog covers programmable
+              modules, serial controllers, the modular Tibbo Project System,
+              Serial-over-IP solutions, Modbus gateways, and protocol
+              monitoring taps — everything needed to put real devices on
+              real networks.
+            </p>
+          </div>
+
+          <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {
+              tibboProducts.map((p) => (
+                <li class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+                  <h3 class="text-base font-semibold text-slate-900">{p.name}</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">{p.desc}</p>
+                </li>
+              ))
+            }
+          </ul>
+
+          <div class="mt-10">
+            <a
+              href="https://tibbo.com"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-500"
+            >
+              Visit tibbo.com →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="border-t border-slate-200 bg-slate-900 text-slate-100">
+        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 sm:py-24 md:grid-cols-2">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-wider text-indigo-300">
+              Get in touch
+            </p>
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Need a quote or product advice?
+            </h2>
+            <p class="mt-5 text-lg leading-relaxed text-slate-300">
+              We help U.S. and Canadian customers select the right Tibbo
+              hardware and IO Ninja licenses for their project. Reach out and
+              we'll come back within one business day.
+            </p>
+          </div>
+          <dl class="space-y-6 text-sm">
+            <div>
+              <dt class="font-semibold text-slate-400 uppercase tracking-wider text-xs">
+                Email
+              </dt>
+              <dd class="mt-1">
+                <a href="mailto:sales@dventure.com" class="text-lg text-white hover:text-indigo-300">
+                  sales@dventure.com
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-slate-400 uppercase tracking-wider text-xs">
+                Company
+              </dt>
+              <dd class="mt-1 text-lg text-white">Dventure LLC · United States</dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-slate-400 uppercase tracking-wider text-xs">
+                Partners
+              </dt>
+              <dd class="mt-1 space-x-4 text-lg">
+                <a href="https://tibbo.com" target="_blank" rel="noopener" class="text-white hover:text-indigo-300">
+                  tibbo.com
+                </a>
+                <a href="https://ioninja.com" target="_blank" rel="noopener" class="text-white hover:text-indigo-300">
+                  ioninja.com
+                </a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400">
+      <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 border-t border-slate-800 px-6 py-8 sm:flex-row sm:items-center">
+        <p class="text-sm">© {new Date().getFullYear()} Dventure LLC. All rights reserved.</p>
+        <p class="text-xs">
+          Tibbo and IO Ninja are trademarks of their respective owners.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
